@@ -1,0 +1,17 @@
+package Ecommerce.Application;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class BraveBrowser {   
+    public static void main(String[] args) {
+        // declaration and instantiation of objects/variables
+        System.setProperty("webdriver.firefox.marionette","C:\\geckodriver.exe");
+                WebDriver driver = new FirefoxDriver();
+                driver.get("http//:www.google.com");
+                //WebElement element = driver.findElement(By.name("q"));
+                //element.sendKeys("mysql excel 2013");
+                //element.submit();
+	}
+
+}

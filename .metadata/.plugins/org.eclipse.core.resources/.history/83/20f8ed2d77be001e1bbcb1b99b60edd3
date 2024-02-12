@@ -1,0 +1,29 @@
+package QDegrees;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class FirstTestClass {
+	
+	private static final WebDriver DRIVER = null;
+
+	public static void main(String[] args) {
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://glueple.com/#/");
+			DRIVER.manage().window().maximize();
+			DRIVER.get("https://www.saucedemo.com/");
+		    System.out.println("Open the browser and launch the URL");
+		}
+
+		@When("Enter valid UserID and Password")
+		public void enter_valid_user_id_and_password() throws Throwable {
+			LOGINPAGE loginpage = new LOGINPAGE();
+			loginpage.Username(DRIVER).sendKeys("standard_user");
+			loginpage.Password(DRIVER).sendKeys("secret_sauce");
+			loginpage.Loginbutton(DRIVER).click();
+			Thread.sleep(5000);
+			System.out.println("Enter valid UserID and Password");
+		}
+	}
+
+}

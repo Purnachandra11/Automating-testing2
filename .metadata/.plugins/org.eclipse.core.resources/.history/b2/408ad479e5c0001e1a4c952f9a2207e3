@@ -1,0 +1,27 @@
+package QDegrees;
+
+import java.util.Scanner;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
+public class NewOne {
+	
+	public static void main(String[] args) throws InterruptedException { 
+		ChromeDriver chromeDriver = new ChromeDriver();
+		chromeDriver.get("http://someurl.com/signup")
+	}
+	    email_field = driver.find_element_by_id('email')
+	    pass_field = driver.find_element_by_id('newPassword')
+	    confirm_pass_field = driver.find_element_by_id('confirmPassword')
+	    for i in range (ord('2'),ord(end)+1):
+	        j = chr(i)
+	        sendValue(email_field,'randomemail+abc%s@gmail.com'%j)
+	        sendValue(pass_field,'bobsayshi')
+	        sendValue(confirm_pass_field,'bobsayshi')
+	        #click submit button
+	        driver.get('http://someurl.com/signup')
+		
+	}

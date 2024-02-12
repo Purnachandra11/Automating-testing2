@@ -1,0 +1,23 @@
+package Ecommerce.Application;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Flow {
+
+	public static void main(String[] args) {
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://www.flipkart.com/");
+		driver.manage().window().maximize();
+		WebElement SearchBox=driver.findElement(By.name("q"));
+		SearchBox.sendKeys("iphone 15 pro");
+		SearchBox.submit();
+		driver.findElement(By.xpath("//div[normalize-space()='Apple iPhone 15 Pro (Natural Titanium, 128 GB)']")).click();
+		
+		
+
+	}
+
+}

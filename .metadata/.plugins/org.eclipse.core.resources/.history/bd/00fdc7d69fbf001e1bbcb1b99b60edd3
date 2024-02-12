@@ -1,0 +1,17 @@
+package QDegrees;
+
+import org.openqa.selenium.WebDriver;
+
+public class LOGINPAGE {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public Object Username(WebDriver driver) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

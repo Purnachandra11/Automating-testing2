@@ -1,0 +1,31 @@
+package QDegrees;
+
+	import java.time.Duration;
+	import org.openqa.selenium.By;
+	import org.openqa.selenium.WebDriver;
+	import org.openqa.selenium.WebElement;
+	import org.openqa.selenium.edge.EdgeDriver;
+	import org.openqa.selenium.support.ui.ExpectedConditions;
+	import org.openqa.selenium.support.ui.WebDriverWait;
+
+	public class Test {
+
+	    public static void main(String[] args) {
+	        System.setProperty("webdriver.edge.driver", "C:\\Users\\shantha_mh\\Desktop\\SeleniumAutomation\\msedgedriver.exe");
+	        WebDriver driver = new EdgeDriver();
+	        driver.get("https://test.idp.idm.cms.gov/");
+	        driver.findElement(By.id("okta-signin-username")).sendKeys("HNAJ");
+	        driver.findElement(By.name("password")).sendKeys("Hs229988");
+	        driver.findElement(By.cssSelector("input[id='tandc']")).click();
+	        System.out.println(driver.findElement(By.cssSelector("input[id='tandc']")).isSelected());
+	        driver.findElement(By.className("button-primary")).click();
+	        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+	        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[@class='o-form-input-name-answer o-form-control okta-form-input-field input-fix']")));
+	        WebElement mfaInput = driver.findElement(By.xpath("//span[@class='o-form-input-name-answer o-form-control okta-form-input-field input-fix']"));
+	        String userInput = mfaInput.getAttribute("value");
+	        driver.findElement(By.xpath("//span[@class='o-form-input-name-answer o-form-control okta-form-input-field input-fix']")).click();
+	        mfaInput.sendKeys(" ");
+	        driver.findElement(By.id("input76")).click();
+	}
+
+}

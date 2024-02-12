@@ -1,0 +1,15 @@
+package Com.Test;
+
+import org.junit.runner.Runwith;
+import io.cucumber.junit.cucumberOptions;
+import io.cumber.junit.cucumber;
+
+@RunWith(Cucumber.class)
+@cucumberOptions(
+		features = "Features"//folder name
+		,glue= {"stepDefinition"} //package name for step def		
+		)
+
+public class TestRunner {
+
+}

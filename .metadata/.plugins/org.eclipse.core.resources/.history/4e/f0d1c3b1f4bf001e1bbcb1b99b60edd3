@@ -1,0 +1,32 @@
+package QDegrees;
+
+import java.util.Scanner;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class GluepleLogin {
+	
+	public static void main(String[] args) throws InterruptedException {
+		
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Please Enter Username/Phone number");
+		String un=sc.next();
+		System.out.println("Please enter password");
+		String pw=sc.next();
+		
+		
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://demo.glueple.com/#/");
+		driver.findElement(By.id("email")).sendKeys("un");
+		Thread.sleep(2000);
+		driver.findElement(By.id("password")).sendKeys("pw");
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("submit-btn']")).click();
+		Thread.sleep(5000);
+		driver.close();
+		
+	}
+
+}

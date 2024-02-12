@@ -1,0 +1,28 @@
+package QDegrees;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
+public class DemoKlubba {
+	
+	public static void main(String[] args) throws InterruptedException {
+		
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://www.klubba.in/");
+		driver.manage().window().maximize();
+		Thread.sleep(10000);
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--disable-notifications");
+		Thread.sleep(5000);
+		driver.findElement(By.xpath("button']")).click();
+		Thread.sleep(5000);
+		driver.findElement(By.id("email")).sendKeys("kalidindi@qdegrees.org");
+		driver.findElement(By.id("email")).clear();
+		driver.findElement(By.id("email")).sendKeys("kalidindi@qdegrees.org");
+		driver.findElement(By.id("password")).sendKeys("Chandhu!11");
+		driver.findElement(By.xpath("submit-btn']")).click();
+		
+	}
+}

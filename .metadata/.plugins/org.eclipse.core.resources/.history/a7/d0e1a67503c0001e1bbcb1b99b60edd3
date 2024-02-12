@@ -1,0 +1,23 @@
+package QDegrees;
+
+	import java.time.Duration;
+	import org.openqa.selenium.By;
+	import org.openqa.selenium.WebDriver;
+	import org.openqa.selenium.WebElement;
+	import org.openqa.selenium.edge.EdgeDriver;
+	import org.openqa.selenium.support.ui.ExpectedConditions;
+	import org.openqa.selenium.support.ui.WebDriverWait;
+
+	public class Test {
+
+	    public static void main(String[] args) {
+	        System.setProperty("webdriver.edge.driver", "C:\\Users\\shantha_mh\\Desktop\\SeleniumAutomation\\msedgedriver.exe");
+	        WebDriver driver = new EdgeDriver();
+	        driver.get("https://test.idp.idm.cms.gov/");
+	        new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.elementToBeClickable(By.cssSelector("input#okta-signin-username"))).sendKeys("HNAJ");
+	        driver.findElement(By.cssSelector("input#okta-signin-password")).sendKeys("Hs229988");
+	        driver.findElement(By.cssSelector("input[title='Agree to terms and conditions']")).click();
+	        driver.findElement(By.cssSelector("input#okta-signin-submit")).click();
+	}
+
+}

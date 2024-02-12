@@ -1,0 +1,16 @@
+package QDegrees;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class FirstTestClass {
+	
+	private static final WebDriver DRIVER = null;
+
+	public static void main(String[] args) {
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://glueple.com/#/");
+			
+	}
+
+}

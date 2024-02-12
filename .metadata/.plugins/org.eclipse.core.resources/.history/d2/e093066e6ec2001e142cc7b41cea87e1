@@ -1,0 +1,19 @@
+package QDegrees;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Test {
+	
+	public static void main(String[] args) throws InterruptedException {
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://glueple.com/#/");
+		driver.findElement(By.id("email")).sendKeys("kalidindi@qdegrees.org");
+		driver.findElement(By.id("email")).clear();
+		driver.findElement(By.id("email")).sendKeys("kalidindi@qdegrees.org");
+		driver.findElement(By.id("password")).sendKeys("Chandhu!11");
+		driver.findElement(By.xpath("submit-btn']")).click();
+		
+	}
+}

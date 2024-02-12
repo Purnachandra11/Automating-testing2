@@ -1,0 +1,5 @@
+package QDegrees;
+
+public @interface When {
+
+}

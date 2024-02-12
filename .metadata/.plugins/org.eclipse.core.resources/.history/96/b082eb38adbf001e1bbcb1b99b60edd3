@@ -1,0 +1,15 @@
+package QDegrees;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class FirstTestClass {
+	
+	public static void main(String[] args) throws InterruptedException {
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://glueple.com/#/");
+		System.out.println("Open the browser and launch the URL");	
+		Thread.sleep(5000);
+	}
+
+}
